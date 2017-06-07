@@ -1,0 +1,10 @@
+# directories
+outputs/
+figs/
+
+# outputs
+*.fig
+*.jpg
+*.png
+*.mat
+
