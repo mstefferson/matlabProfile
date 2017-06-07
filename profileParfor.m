@@ -14,9 +14,12 @@ maxThreads = feature('numthreads');
 poolObj = gcp('nocreate');
 if isempty(poolObj)
   poolObj = parpool( min(numWorkers,maxLogicalCores) );
+elseif poolObj.NumWorkers ~= min(numWorkers, maxLogicalCores)
+    delete(poolObj);
+    poolObj = parpool( min(numWorkers,maxLogicalCores) );
 end
+% get workers
 numWorkers = poolObj.NumWorkers;
-
 % loop over n
 for nn = 1:numN
   A = rand( nVec(nn) );
