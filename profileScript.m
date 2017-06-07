@@ -5,6 +5,8 @@ functionId = 1;
 numWorkers = 8;
 numIterations = 1000000;
 plotTimes = 1;
+% make outputs if it doesn't exist
+if ~exist('outputs','dir'); mkdir( 'outputs'); end
 for ii = 1:5
   functionId = ii;
   [out] = profileParfor( nVec, functionId, numWorkers, numIterations, plotTimes );
