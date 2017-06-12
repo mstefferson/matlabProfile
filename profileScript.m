@@ -1,4 +1,6 @@
 function profileScript( comp, numWorkers, plotTimes  )
+% add path
+addpath('./src');
 % print some things
 fprintf('On %s, requesting %d workers. Plot flag: %d\n', comp, numWorkers, plotTimes);
 % hard code things to test

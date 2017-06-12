@@ -2,6 +2,8 @@ function summarizeRuns(saveFlag)
 if nargin == 0
   saveFlag = 0;
 end
+% add path
+addpath('./src');
 % cells
 compList = {'propagandhi','nofx', 'summit'};
 funcList = {'sum','max','mult','eig','fft','find'};
