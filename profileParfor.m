@@ -20,6 +20,8 @@ elseif poolObj.NumWorkers ~= min(numWorkers, maxLogicalCores)
 end
 % get workers
 numWorkers = poolObj.NumWorkers;
+% print some things
+fprintf('%d cores. %d workers\n', maxLogicalCores, numWorkers);
 % loop over n
 for nn = 1:numN
   A = rand( nVec(nn) );

@@ -1,4 +1,6 @@
 function profileScript( comp, numWorkers, plotTimes  )
+% print some things
+fprintf('On %s, requesting %d workers. Plot flag: %d\n', comp, numWorkers, plotTimes);
 % hard code things to test
 nVec = [8 16 32 64 138 256 512 1024];
 % function to test: 1) sum 2) max 3) multiply 4) eig 5) fft
