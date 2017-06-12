@@ -6,7 +6,7 @@ function [out] = ...
 numN = length(nVec);
 runTimeFor = zeros( numN, 1 );
 runTimeParfor =  zeros( numN, 1 );
-functionCell = {'sum','max','mult','eig','fft'};
+functionCell = {'sum','max','mult','eig','fft','find'};
 funcStr = functionCell{functionId};
 % start pool
 maxLogicalCores = feature('numcores');
@@ -67,6 +67,8 @@ elseif functionId == 4
   B = eig(A);
 elseif functionId == 5
   B = fftn(A);
+elseif functionId == 6
+  B = find(A>0.5);
 else
   error('Invalid function ID');
 end

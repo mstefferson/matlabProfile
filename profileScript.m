@@ -7,7 +7,7 @@ nVec = [8 16 32 64 138 256 512 1024];
 numIterations = 1000000;
 % make outputs if it doesn't exist
 if ~exist('outputs','dir'); mkdir( 'outputs'); end
-for ii = 1:5
+for ii = 1:6
   functionId = ii;
   [out] = profileParfor( nVec, functionId, numWorkers, numIterations, plotTimes );
   saveStr = [ 'profile_' out.funcStr '_' comp '_nWork' num2str(out.numWorkers) ...
