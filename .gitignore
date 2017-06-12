@@ -11,3 +11,5 @@ figs/
 *.err
 *.out
 
+# temps
+*~
